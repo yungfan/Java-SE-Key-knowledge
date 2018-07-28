@@ -1,0 +1,5 @@
+TCP:
+1.客户端和服务器端的输入和输出应该是独立的  而不应该在一个方法里保持一个顺序 =====>多线程解决
+2.客户端有两个独立的线程 分别处理输入和输出  同理，服务器端也是
+3.编写顺序：MainServer和MainClient->ServerInputThread和ServerOutputThread->ClientInputThread和ClientOutputThread
+4.如果起两个客户端，那么服务器发送的信息到底给谁？ 最好的办法是服务器广播信息时，遍历所有的客户端，然后发送信息所有的客户端 

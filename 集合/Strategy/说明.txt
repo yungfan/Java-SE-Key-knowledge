@@ -1,0 +1,10 @@
+策略模式的三个角色类比
+
+1.抽象策略角色 ———— Comparator接口
+
+2.具体策略角色 ———— 自己实现Comparator接口的类
+
+3.环境角色 ———— TreeSet或者TreeMap
+环境角色保持一个抽象策略角色的引用————TreeSet或者TreeMap保持一个Comparator的引用
+
+4.客户端 ———— 可以传给TreeSet或者TreeMap排序规则(new一个实现Comparator接口的类 然后作为TreeSet或者TreeMap的参数)
